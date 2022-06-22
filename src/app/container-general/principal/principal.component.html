@@ -1,0 +1,77 @@
+<nb-layout>
+  <nb-layout-column>
+    <nb-card>
+      <nb-card-body>
+        <div class="row">
+          <div class="col-lg-12 text-center" style="display: grid;">
+            <label for="numA">número A</label>
+            <input id="numA" type="number" [(ngModel)]="numeroA" nbInput class="diseno" fullWidth status="info"
+              placeholder="número A">
+            <label for="numB">número B</label>
+            <input id="numB" type="number" [(ngModel)]="numeroB" nbInput class="diseno" fullWidth status="info"
+              placeholder="número B">
+            <label for="numN">número N</label>
+            <input id="numN" type="number" [(ngModel)]="numeroN" nbInput class="diseno" fullWidth status="info"
+              placeholder="número N">
+          </div>
+          <div class="col-lg-12 text-center mt-3">
+            <button nbButton hero status="success" (click)="ejecutar()">Ejecutar</button>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+    <nb-card class="body mb-4">
+      <nb-card-header class="text-center">Aritmética Modular</nb-card-header>
+      <nb-card-body class="styleBody">
+        <nb-tabset fullWidth>
+          <nb-tab tabTitle="Adición Modular">
+            <p><strong>Adición Modular</strong>.</p>
+            <h4>El resultado de la adición modular es:</h4>
+            <h3><strong>{{totalAdicion}}</strong></h3>
+          </nb-tab>
+          <nb-tab tabTitle="Sustración Modular">
+            <p><strong>Sustración Modular</strong>.</p>
+            <h4>El resultado de la Sustración modular es:</h4>
+            <h3><strong>{{totalsustraccion}}</strong></h3>
+          </nb-tab>
+          <nb-tab tabTitle="Multiplicación Modular">
+            <p><strong>Multiplicación Modular</strong>.</p>
+            <h4>El resultado de la multiplicación modular es:</h4>
+            <h3><strong>{{totalmultiplicacion}}</strong></h3>
+          </nb-tab>
+          <nb-tab tabTitle="División Modular">
+            <p><strong>Resta Modular</strong>.</p>
+            <h4>El resultado de la división modular es:</h4>
+            <h3><strong>{{totaldivision}}</strong></h3>
+          </nb-tab>
+        </nb-tabset>
+      </nb-card-body>
+    </nb-card>
+    <nb-card>
+      <nb-card-header class="text-center" style="color: white;    font-size: 2rem;
+      -webkit-text-stroke: 1px black;">"Plus" - Proposición</nb-card-header>
+      <nb-card-body>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p style="font-size: medium;">Sea N un entero positivo y sea E Zn, si a tiene un reciproco en Zn, solo tiene un reciproco.</p>
+          </div>
+          <div class="col-lg-12 text-center" style="display: grid;">
+            <label for="numA">número A</label>
+            <input id="numA" type="number" [(ngModel)]="numeroAP" nbInput class="diseno" fullWidth status="info"
+              placeholder="número A">
+            <label for="numAP">número N</label>
+            <input id="numAP" type="number" [(ngModel)]="numeroNP" nbInput class="diseno" fullWidth status="info"
+              placeholder="número N">
+          </div>
+          <div class="col-lg-12 text-center mt-3">
+            <button nbButton hero status="success" (click)="ejecutarDos()">Ejecutar</button>
+          </div>
+        </div>
+        <div>
+          <h4>El resultado de la división modular es:</h4>
+          <h3><strong>{{mensaje}}</strong></h3>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>

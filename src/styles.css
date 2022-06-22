@@ -1,0 +1,8 @@
+.nb-theme-default .shape-rectangle {
+    border-radius: .25rem;
+}
+
+.nb-theme-default nb-tabset .tab .tab-link {
+    color: black;
+    background-color: rgba(0,0,0,0);
+}
